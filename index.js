@@ -80,7 +80,7 @@ listJson.forEach(myArgs => {
             input: inputRst,
             output: outputRst,
         },
-        path: `./output-${ myArgs[1] }.pdf`,
+        path: `./output/manual-${ myArgs[1] }.pdf`,
         type: "",
     };
 
