@@ -57,7 +57,7 @@ listJson.forEach(myArgs => {
         inputRst.push({
             name: name || "",
             type: type  || "" ,
-            chName: "中文名稱"
+            chName: "-"
         })
     })
     console.log(inputRst)
@@ -70,8 +70,8 @@ listJson.forEach(myArgs => {
         outputRst.push({
             name: "output",
             type: pair[4],
-            chName: "中文名稱",
-            comment: "註釋"
+            chName: "-",
+            comment: "-"
         })
     })
     console.log(outputRst)
