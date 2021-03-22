@@ -32,7 +32,8 @@ var options = {
             default: '<span style="color: #444;">{{page}}</span>/<span>{{pages}}</span>', // fallback value
             last: 'Last Page'
         }
-    }
+    },
+    type: 'pdf', timeout: '100000'
 };
 
 listJson.forEach(myArgs => {
