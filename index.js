@@ -3,17 +3,15 @@ var pdf = require("pdf-creator-node");
 var fs = require("fs");
 var listJson = require('./list.json');
 
-var myArgs = process.argv.slice(2);
-console.log('myArgs: ', myArgs);
+// var myArgs = process.argv.slice(2);
+// console.log('myArgs: ', myArgs);
 
 // Read HTML Template
 var html = fs.readFileSync("template.html", "utf8");
 
-if (typeof require !== 'undefined') XLSX = require('xlsx');
+// if (typeof require !== 'undefined') XLSX = require('xlsx');
 // var workbook = XLSX.readFile('test.xlsx');
 /* DO SOMETHING WITH workbook HERE */
-
-
 
 var options = {
     format: "A3",
@@ -80,5 +78,4 @@ for (myArgs in listJson) {
             console.error(error);
         });
 }
-
 
