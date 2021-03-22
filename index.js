@@ -62,7 +62,6 @@ for (myArgs in listJson) {
     var document = {
         html: html,
         data: {
-            // users: users,
             fileName: myArgs[0],
             functionName: myArgs[1],
             functionEffect: myArgs[2],
@@ -82,23 +81,4 @@ for (myArgs in listJson) {
         });
 }
 
-for (inputParameter in inputParameters) {
-    pair = inputParameter.split(":");
-    name = pair[0]
-    type = pair[1]
-    
-}
 
-// var users = [{
-//         name: "Shyam",
-//         age: "26",
-//     },
-//     {
-//         name: "Navjot",
-//         age: "26",
-//     },
-//     {
-//         name: "Vitthal",
-//         age: "26",
-//     },
-// ];
