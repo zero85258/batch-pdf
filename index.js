@@ -50,20 +50,20 @@ listJson.forEach(myArgs => {
     
 
     inputRst = []
-    for (inputParameter in inputParameters) {
+    inputParameters.forEach(inputParameter => {
         pair = inputParameter.split(":");
         inputRst.push({
             name: pair[0] || "",
             type: pair[1] || "" ,
             chName: "中文名稱"
         })
-    }
+    })
     console.log(inputRst)
 
     // console.log(inputRst)
     
     outputRst = []
-    for (outputParameter in outputParameters) {
+    outputParameters.forEach(outputParameter => {
         pair = outputParameter.split(":");
         outputRst.push({
             name: pair[0] || "",
@@ -71,7 +71,7 @@ listJson.forEach(myArgs => {
             chName: "中文名稱",
             comment: "註釋"
         })
-    }
+    })
     console.log(outputRst)
 
     var document = {
