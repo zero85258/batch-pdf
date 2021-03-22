@@ -1,6 +1,7 @@
 //Required package
 var pdf = require("pdf-creator-node");
 var fs = require("fs");
+var listJson = require('./list.json');
 
 var myArgs = process.argv.slice(2);
 console.log('myArgs: ', myArgs);
@@ -33,16 +34,31 @@ var options = {
     }
 };
 
+for (myArgs in listJson) {
+    inputParameters = myArgs[3].split(",");
+    outputParameters = myArgs[4].split(",");
 
+    inputRst = []
+    for (inputParameter in inputParameters) {
+        pair = inputParameter.split(":");
+        inputRst.append({
+            name: pair[0],
+            type: pair[1],
+            chName: "中文名稱"
+        })
+    }
+    
+    outputRst = []
+    for (outputParameter in outputParameters) {
+        pair = outputParameter.split(":");
+        outputRst.append({
+            name: pair[0],
+            type: pair[1],
+            chName: "中文名稱",
+            comment: "註釋"
+        })
+    }
 
-
-inputParameters = myArgs[3].split(",");
-outputParameters = myArgs[4].split(",");
-
-for (inputParameter in inputParameters) {
-    pair = inputParameter.split(":");
-    name = pair[0]
-    type = pair[1]
     var document = {
         html: html,
         data: {
@@ -50,19 +66,10 @@ for (inputParameter in inputParameters) {
             fileName: myArgs[0],
             functionName: myArgs[1],
             functionEffect: myArgs[2],
-            input: [{
-                name: "gsgsgsg",
-                type: "gsgsgsg",
-                chName: "中文名稱",
-            }],
-            output: [{
-                name: "gsgsgsg",
-                type: "gsgsgsg",
-                chName: "gsgsgsg",
-                comment: "fsdfsdfsdfsdf"
-            }],
+            input: intputRst,
+            output: outputRst,
         },
-        path: `./output--${ myArgs[0] }.pdf`,
+        path: `./output-${ myArgs[0] }.pdf`,
         type: "",
     };
 
@@ -73,6 +80,13 @@ for (inputParameter in inputParameters) {
         .catch((error) => {
             console.error(error);
         });
+}
+
+for (inputParameter in inputParameters) {
+    pair = inputParameter.split(":");
+    name = pair[0]
+    type = pair[1]
+    
 }
 
 // var users = [{
