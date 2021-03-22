@@ -1,0 +1,863 @@
+[
+  [
+    "./dto/workflow_dto.py",
+    "get_start_date",
+    "獲取開始日期",
+    "()",
+    "str"
+  ],
+  [
+    "./dto/workflow_dto.py",
+    "get_end_date",
+    "獲取結束日期",
+    "()",
+    "str"
+  ],
+  [
+    "./dto/workflow_dto.py",
+    "get_where_sql",
+    "得到where的SQL",
+    "()",
+    "str"
+  ],
+  [
+    "./tools/log_util.py",
+    "write_log",
+    "寫日誌",
+    "(msg: str, path: str = ./logs/default.log)",
+    "None"
+  ],
+  [
+    "./tools/log_util.py",
+    "print_and_log",
+    "打印並log",
+    "(msg: str)",
+    "None"
+  ],
+  [
+    "./tools/log_util.py",
+    "write_err_stack",
+    "寫錯誤堆棧",
+    "(e: Exception, path: str = ./logs/error.log)",
+    "None"
+  ],
+  [
+    "./tools/log_util.py",
+    "write_err_log",
+    "寫錯誤日誌",
+    "(msg: str, path: str = ./logs/error.log)",
+    "None"
+  ],
+  [
+    "./tools/log_util.py",
+    "_write_and_print",
+    "書寫和打印",
+    "(msg: str)",
+    "None"
+  ],
+  [
+    "./tools/log_util.py",
+    "_mkdir",
+    "創建dir",
+    "(path: str)",
+    "None"
+  ],
+  [
+    "./tools/log_util.py",
+    "close_file",
+    "關閉檔案io",
+    "()",
+    "None"
+  ],
+  [
+    "./tools/gp_util.py",
+    "set_conn_info",
+    "設置conn信息",
+    "(conn_type: str)",
+    "None"
+  ],
+  [
+    "./tools/gp_util.py",
+    "del_script",
+    "刪除腳本",
+    "(script_file: str)",
+    "None"
+  ],
+  [
+    "./tools/gp_util.py",
+    "gen_sql_file",
+    "產生sql文件",
+    "(sql: str, sql_file: str)",
+    "int"
+  ],
+  [
+    "./tools/gp_util.py",
+    "get_gpcopy_cmd",
+    "獲取gpcopy cmd",
+    "(json_path: str)",
+    "str"
+  ],
+  [
+    "./tools/gp_util.py",
+    "pg_dump_sql",
+    "pg dump sql",
+    "(conn_type: str, options: str)",
+    "str"
+  ],
+  [
+    "./tools/gp_util.py",
+    "psql_copy_to_stdout",
+    "執行sql,結果到stdout",
+    "(log_path: str, sel_sql: str)",
+    "str"
+  ],
+  [
+    "./tools/gp_util.py",
+    "psql_copy_from_stdin",
+    "執行sql,從stdin",
+    "(log_path: str, schema: str, table: str)",
+    "str"
+  ],
+  [
+    "./tools/gp_util.py",
+    "psql_copy_to_file",
+    "執行sql,結果到檔案",
+    "(log_path: str, sel_sql: str, file_path: str, options: str = )",
+    "str"
+  ],
+  [
+    "./tools/gp_util.py",
+    "psql_copy_pipe",
+    "psql複製管道",
+    "(log_path: str, sel_sql: str, schema: str, table: str)",
+    "str"
+  ],
+  [
+    "./tools/gp_util.py",
+    "psql_exe_file",
+    "psql 執行文件",
+    "(sql_file: str, log_file: str, conn_type: str)",
+    "int"
+  ],
+  [
+    "./tools/file_operate.py",
+    "check_if_file_create",
+    "檢查文件是否創建",
+    "(folder_name: str, file_name: str)",
+    "None"
+  ],
+  [
+    "./tools/file_operate.py",
+    "check_if_file_exist",
+    "檢查文件是否存在",
+    "(folder_name: str, file_name: str)",
+    "bool"
+  ],
+  [
+    "./tools/file_operate.py",
+    "is_file_exist",
+    "文件是否存在",
+    "(folder_name: str, file_name: str)",
+    "bool"
+  ],
+  [
+    "./tools/file_operate.py",
+    "check_if_folder_create",
+    "檢查文件夾是否創建",
+    "(folder_name: str)",
+    "None"
+  ],
+  [
+    "./tools/file_operate.py",
+    "check_if_folder_exist",
+    "檢查文件夾是否存在",
+    "(folder_name: str)",
+    "bool"
+  ],
+  [
+    "./tools/file_operate.py",
+    "del_file",
+    "刪除文件",
+    "(file_path: str)",
+    "bool"
+  ],
+  [
+    "./tools/file_operate.py",
+    "mk_dir",
+    "創建目錄",
+    "(path: str)",
+    "None"
+  ],
+  [
+    "./tools/pg_util.py",
+    "create_sql_mask",
+    "創建masking SQL",
+    "(sql_path: str, create_table_sql: str, sschema: str, stable: str, tschema: str, ttable: str, workflow_dto_obj: WorkflowDto)",
+    "None"
+  ],
+  [
+    "./tools/pg_util.py",
+    "exe_psql_copy",
+    "執行 psql複製",
+    "(work_folder: str, cmd: str, table: str)",
+    "int"
+  ],
+  [
+    "./tools/pg_util.py",
+    "err_msg",
+    "獲取錯誤消息",
+    "()",
+    "str"
+  ],
+  [
+    "./tools/dao.py",
+    "is_table_exist",
+    "判斷表是否存在",
+    "(schema_name: str, table_name: str)",
+    "int"
+  ],
+  [
+    "./tools/dao.py",
+    "get_check_cnt_and_sum",
+    "得到count和sum的物件",
+    "(workflow_dto_obj: WorkflowDto, server_type: str)",
+    "CheckCntAndSumDto"
+  ],
+  [
+    "./tools/dao.py",
+    "get_table_ddl",
+    "獲取表ddl",
+    "(schema: str, table: str)",
+    "str"
+  ],
+  [
+    "./tools/dao.py",
+    "insert",
+    "db插入api",
+    "(sql: str)",
+    "int"
+  ],
+  [
+    "./tools/dao.py",
+    "select",
+    "db查詢api",
+    "(sql: str)",
+    "List"
+  ],
+  [
+    "./tools/dao.py",
+    "update",
+    "db更新api",
+    "(sql: str, parm: tuple = tuple())",
+    "int"
+  ],
+  [
+    "./tools/dao.py",
+    "placeholder_statement",
+    "佔位符聲明",
+    "(sql: str, parm: tuple = tuple())",
+    "int"
+  ],
+  [
+    "./tools/dao.py",
+    "statement",
+    "db執行sqlapi",
+    "(sql: str)",
+    "int"
+  ],
+  [
+    "./tools/dao.py",
+    "close_conn",
+    "關閉conn",
+    "()",
+    "None"
+  ],
+  [
+    "./tools/dao.py",
+    "open_conn",
+    "開connection io",
+    "()",
+    ""
+  ],
+  [
+    "./tools/dao.py",
+    "open_conn_with_retry",
+    "重試打開connection io",
+    "(cnt: int)",
+    "None"
+  ],
+  [
+    "./tools/dao.py",
+    "pg_dump_sql",
+    "dump sql",
+    "(schema: str, table: str, options: Optional[str] )",
+    "str"
+  ],
+  [
+    "./tools/dao.py",
+    "proc_function",
+    "調用store procdural",
+    "(function)",
+    "bool"
+  ],
+  [
+    "./tools/dao.py",
+    "proc_function_with_parameters",
+    "帶參數的調用store procdural",
+    "(function, *parameters)",
+    ""
+  ],
+  [
+    "./tools/common_func.py",
+    "convert_date",
+    "轉換日期by格式",
+    "(date_str: str, the_format: str, field_num: str, the_num: int)",
+    "str"
+  ],
+  [
+    "./tools/common_func.py",
+    "get_housekeeping_date",
+    "取得housekeeping日期",
+    "(the_date: datetime, housekeeping_days: int)",
+    "str"
+  ],
+  [
+    "./tools/common_func.py",
+    "get_month_begin_date",
+    "獲取月份開始日期",
+    "(months: int, date_format: str)",
+    "str"
+  ],
+  [
+    "./tools/common_func.py",
+    "get_month_end_date",
+    "獲取月份結束日期",
+    "(months: int, date_format: str)",
+    "str"
+  ],
+  [
+    "./tools/common_func.py",
+    "get_week_begin_date",
+    "獲取星期開始日期",
+    "(weeks: int, date_format: str)",
+    "str"
+  ],
+  [
+    "./tools/common_func.py",
+    "get_week_end_date",
+    "獲取星期結束日期",
+    "(weeks: int, date_format: str)",
+    "str"
+  ],
+  [
+    "./tools/common_func.py",
+    "get_today",
+    "獲取今天日期",
+    "(the_date: datetime, the_format: str)",
+    "str"
+  ],
+  [
+    "./tools/common_func.py",
+    "to_decimal",
+    "小數格式化",
+    "(obj: Any)",
+    "Any"
+  ],
+  [
+    "./tools/exec_process.py",
+    "start_process",
+    "執行shell並且log",
+    "()",
+    "int"
+  ],
+  [
+    "./core/framework.py",
+    "load_config",
+    "加載配置",
+    "(conf_file: str = config.json)",
+    ""
+  ],
+  [
+    "./core/framework.py",
+    "open_conn",
+    "開connection io",
+    "()",
+    ""
+  ],
+  [
+    "./core/framework.py",
+    "close_conn",
+    "關connection io",
+    "()",
+    ""
+  ],
+  [
+    "./core/framework.py",
+    "init_session_connection",
+    "初始化db連接",
+    "()",
+    ""
+  ],
+  [
+    "./core/house_keeping_workers.py",
+    "_is_equals_when_ignore_case",
+    "判斷兩字串是否相等,當忽略大小寫的情形下",
+    "(eqstr1: str, eqstr2: str)",
+    "bool"
+  ],
+  [
+    "./core/house_keeping_workers.py",
+    "run",
+    "呼叫_run_house_keeping，且更新狀態",
+    "(order: dict)",
+    "None"
+  ],
+  [
+    "./core/house_keeping_workers.py",
+    "_run_house_keeping",
+    "執行house keeping",
+    "(order: dict)",
+    "int"
+  ],
+  [
+    "./core/house_keeping_workers.py",
+    "_update_work_order_status",
+    "更新內部整理workorder狀態",
+    "(order: dict, status: str)",
+    "None"
+  ],
+  [
+    "./core/ddl_workers.py",
+    "generate_user_authority_ddl",
+    "生成用戶權限ddl",
+    "(job_type)",
+    ""
+  ],
+  [
+    "./core/ddl_workers.py",
+    "generate_tables_ddl",
+    "生成表ddl",
+    "(job_type)",
+    ""
+  ],
+  [
+    "./core/ddl_workers.py",
+    "generate_objects_ddl",
+    "生成objects ddl",
+    "(job_type)",
+    ""
+  ],
+  [
+    "./core/ddl_workers.py",
+    "generate_security_db_ddl_by_pg_dump",
+    "生成security_db ddl",
+    "(job_type)",
+    "int"
+  ],
+  [
+    "./core/ddl_workers.py",
+    "generate_function_ddl_by_pg_dump",
+    "生成function ddl",
+    "(job_type)",
+    "int"
+  ],
+  [
+    "./core/ddl_workers.py",
+    "dump_all_ddl",
+    "dump 全部ddl",
+    "()",
+    "int"
+  ],
+  [
+    "./core/ddl_workers.py",
+    "restore_all_ddl",
+    "restore 全部ddl",
+    "()",
+    "int"
+  ],
+  [
+    "./core/ddl_workers.py",
+    "export_object",
+    "匯出db table + function",
+    "(job_type)",
+    ""
+  ],
+  [
+    "./core/ddl_workers.py",
+    "import_object",
+    "匯入db table + function",
+    "(job_type)",
+    ""
+  ],
+  [
+    "./core/ddl_workers.py",
+    "restore_user_authority_objects",
+    "匯入用戶權限對象",
+    "(job_type)",
+    ""
+  ],
+  [
+    "./core/ddl_workers.py",
+    "resotre_security_db_from_pg_dump",
+    "從pg dump解析安全性數據庫",
+    "(job_type)",
+    ""
+  ],
+  [
+    "./core/ddl_workers.py",
+    "restore_tables_objects",
+    "恢復表對象",
+    "(job_type)",
+    ""
+  ],
+  [
+    "./core/ddl_workers.py",
+    "restore_function_from_pg_dump",
+    "從pg dump restore功能",
+    "(job_type)",
+    ""
+  ],
+  [
+    "./core/ddl_workers.py",
+    "_append_cascade",
+    "使刪除時會連動dependency",
+    "(synchronize_type: str)",
+    "None"
+  ],
+  [
+    "./core/ddl_workers.py",
+    "_recreate_schema",
+    "重新創建schema",
+    "(synchronize_type: str)",
+    "None"
+  ],
+  [
+    "./core/ddl_workers.py",
+    "initialize_lists",
+    "初始化列表",
+    "(job_type)",
+    "int"
+  ],
+  [
+    "./core/ddl_workers.py",
+    "_exec_and_logs",
+    "執行和寫日誌",
+    "(cmd)",
+    ""
+  ],
+  [
+    "./core/ddl_workers.py",
+    "_export_to_files",
+    "導出到文件",
+    "(ddl_select_sql: str, object_select_sql: str, sub_folder: str)",
+    ""
+  ],
+  [
+    "./core/ddl_workers.py",
+    "_export_object_list_to_file",
+    "將對象列表導出到文件",
+    "(select_result_set: list, foldername: str, sub_folder: str)",
+    ""
+  ],
+  [
+    "./core/ddl_workers.py",
+    "_export_ddl_to_file",
+    "將ddl導出到文件",
+    "(select_result_set: list, foldername: str, sub_folder: str)",
+    ""
+  ],
+  [
+    "./core/ddl_workers.py",
+    "_object_list_insert_sql",
+    "獲取object列表的insert sql",
+    "(schema_name, table_name, data: dict):  # , object_type, schema, table)",
+    ""
+  ],
+  [
+    "./core/ddl_workers.py",
+    "_ddl_list_insert_sql",
+    "獲取ddl list的insert sql",
+    "(rep_schema, repo_table, ddl_type, exec_sequence, schema_name, object_type, object_name, ddl_content, ddl_content_create, ddl_content_drop, status, error_reason)",
+    "str"
+  ],
+  [
+    "./core/data_workers.py",
+    "_config_key_checker",
+    "設定檔的key and value檢查器",
+    "(must_keys, config)",
+    ""
+  ],
+  [
+    "./core/data_workers.py",
+    "_invoke_store_procedural_to_generate_ddl_list",
+    "生成ddl列表(invoke)",
+    "(object_type, destination, job_type)",
+    ""
+  ],
+  [
+    "./core/data_workers.py",
+    "run",
+    "依照狀態執行相應的etl,elt,masking任務",
+    "()",
+    "None"
+  ],
+  [
+    "./core/data_workers.py",
+    "_run_gpcopy",
+    "運行gpcopy",
+    "()",
+    "int"
+  ],
+  [
+    "./core/data_workers.py",
+    "_get_gpcopy_partition_tables",
+    "獲取gpcopy分區表",
+    "()",
+    "list"
+  ],
+  [
+    "./core/data_workers.py",
+    "init_duplicate_data",
+    "初始化重複數據",
+    "(table)",
+    "None"
+  ],
+  [
+    "./core/data_workers.py",
+    "_exec_gpcopy",
+    "執行 gpcopy by table",
+    "(schema: str, table: str)",
+    "int"
+  ],
+  [
+    "./core/data_workers.py",
+    "_exec_gpcopy_partitions",
+    "執行 gpcopy by partitions",
+    "(schema: str, tables: list)",
+    "int"
+  ],
+  [
+    "./core/data_workers.py",
+    "_run_mask",
+    "運行masking任務",
+    "()",
+    "int"
+  ],
+  [
+    "./core/data_workers.py",
+    "_run_export",
+    "運行導出(二段式)",
+    "()",
+    "int"
+  ],
+  [
+    "./core/data_workers.py",
+    "_run_import",
+    "運行導入(二段式)",
+    "()",
+    "int"
+  ],
+  [
+    "./core/data_workers.py",
+    "_exe_sql_file",
+    "執行 sql文件",
+    "(work_folder: str, log_folder: str, script_file: str, conn_type: str)",
+    "int"
+  ],
+  [
+    "./core/data_workers.py",
+    "_get_src_table_ddl",
+    "獲取src表ddl",
+    "(schema: str, table: str)",
+    "str"
+  ],
+  [
+    "./core/data_workers.py",
+    "_set_seq_setval",
+    "設置seq setval",
+    "()",
+    "None"
+  ],
+  [
+    "./core/data_workers.py",
+    "_gen_mask_schema_table",
+    "產生遮罩schema table",
+    "()",
+    "None"
+  ],
+  [
+    "./dao/status_dao.py",
+    "_get_queuing_sql",
+    "獲取 狀態是queuing的 SQL",
+    "(step_name: str)",
+    "str"
+  ],
+  [
+    "./dao/status_dao.py",
+    "_get_fail_sql",
+    "獲取 狀態是fail的 SQL",
+    "(step_name: str)",
+    "str"
+  ],
+  [
+    "./dao/status_dao.py",
+    "_get_running_sql",
+    "獲取 狀態是running的 SQL",
+    "(step_name: str)",
+    "str"
+  ],
+  [
+    "./dao/status_dao.py",
+    "_get_success_sql",
+    "獲取 狀態是success的 SQL",
+    "(step_name: str)",
+    "str"
+  ],
+  [
+    "./dao/status_dao.py",
+    "init_steps",
+    "初始化 step表",
+    "()",
+    "int"
+  ],
+  [
+    "./dao/status_dao.py",
+    "get_status",
+    "獲取該step的status",
+    "(step: str)",
+    "str"
+  ],
+  [
+    "./dao/status_dao.py",
+    "resume",
+    "恢復step的status",
+    "()",
+    "int"
+  ],
+  [
+    "./dao/status_dao.py",
+    "update_status_by_step",
+    "更新status by step",
+    "(step: str, status: str)",
+    "int"
+  ],
+  [
+    "./dao/workflow_dao.py",
+    "find_all_force",
+    "獲取所有的workflow",
+    "(job_type: str)",
+    "None"
+  ],
+  [
+    "./dao/workflow_dao.py",
+    "get_workflow_by_source",
+    "獲取workflow by 一些參數",
+    "(job_type: str, schema_name: str, table_name: str)",
+    "WorkflowDto"
+  ],
+  [
+    "./dao/work_order_dao.py",
+    "fill_work_order",
+    "填寫工作單",
+    "()",
+    "int"
+  ],
+  [
+    "./dao/work_order_dao.py",
+    "resume_status",
+    "恢復及修復status",
+    "()",
+    "None"
+  ],
+  [
+    "./dao/work_order_dao.py",
+    "find_top_n",
+    "找到前n個workordor",
+    "(n: str)",
+    "List[WorkOrderDto]"
+  ],
+  [
+    "./dao/work_order_dao.py",
+    "_query_work_order",
+    "查詢workorder",
+    "(sql: str)",
+    "List[WorkOrderDto]"
+  ],
+  [
+    "./dao/work_order_dao.py",
+    "_get_fail_sql",
+    "獲取失敗的SQL",
+    "(err_msg: str)",
+    "str"
+  ],
+  [
+    "./dao/work_order_dao.py",
+    "_get_running_sql",
+    "得到運行SQL",
+    "(set_start_time: bool)",
+    "str"
+  ],
+  [
+    "./dao/work_order_dao.py",
+    "_get_success_sql_with_cnt",
+    "使用cnt獲取成功的sql",
+    "(src_check: CheckCntAndSumDto, tgt_check: CheckCntAndSumDto)",
+    "Tuple"
+  ],
+  [
+    "./dao/work_order_dao.py",
+    "_get_success_sql_without_cnt",
+    "沒有cnt獲得成功的sql",
+    "(src_check: CheckCntAndSumDto)",
+    "Tuple"
+  ],
+  [
+    "./dao/work_order_dao.py",
+    "_get_where_sql",
+    "獲取where的SQL",
+    "(stat_sql: str)",
+    "str"
+  ],
+  [
+    "./dao/work_order_dao.py",
+    "update_work_order",
+    "更新workordor",
+    "(work_order: WorkOrderDto, status: str)",
+    "int"
+  ],
+  [
+    "./dao/work_order_dao.py",
+    "update_status_by_check_sum",
+    "通過校驗和更新狀態",
+    "(status: str, is_count_table: bool, err_msg: str, src_check: Optional[CheckCntAndSumDto], tgt_check: Optional[CheckCntAndSumDto], set_start_time: Optional[bool] = True)",
+    "int"
+  ],
+  [
+    "./dao/work_order_dao.py",
+    "update_status_fail",
+    "更新狀態失敗",
+    "(err_msg: str)",
+    "int"
+  ],
+  [
+    "./start_etl.py",
+    "routing_task",
+    "路由任務",
+    "()",
+    ""
+  ],
+  [
+    "./start_etl.py",
+    "dequeue_house_keeping",
+    "dequeue house_keeping",
+    "()",
+    "int"
+  ],
+  [
+    "./start_etl.py",
+    "dequeue_task",
+    "dequeue task",
+    "()",
+    "int"
+  ]
+]

@@ -2,6 +2,9 @@
 var pdf = require("pdf-creator-node");
 var fs = require("fs");
 
+var myArgs = process.argv.slice(2);
+console.log('myArgs: ', myArgs);
+
 // Read HTML Template
 var html = fs.readFileSync("template.html", "utf8");
 
@@ -31,48 +34,57 @@ var options = {
 };
 
 
-var users = [{
-        name: "Shyam",
-        age: "26",
-    },
-    {
-        name: "Navjot",
-        age: "26",
-    },
-    {
-        name: "Vitthal",
-        age: "26",
-    },
-];
-var document = {
-    html: html,
-    data: {
-        users: users,
-        fileName:"nnnnn",
-        functionName: "gggg",
-        functionEffect: "fffffff",
-        input : [{
-            name: "gsgsgsg",
-            type: "gsgsgsg",
-            chName: "gsgsgsg",
-        }],
-        output : [{
-            name: "gsgsgsg",
-            type: "gsgsgsg",
-            chName: "gsgsgsg",
-            comment: "fsdfsdfsdfsdf"
-        }],
-    },
-    path: "./output.pdf",
-    type: "",
-};
 
-pdf
-    .create(document, options)
-    .then((res) => {
-        console.log(res);
-    })
-    .catch((error) => {
-        console.error(error);
-    });
 
+inputParameters = myArgs[3].split(",");
+outputParameters = myArgs[4].split(",");
+
+for (inputParameter in inputParameters) {
+    pair = inputParameter.split(":");
+    name = pair[0]
+    type = pair[1]
+    var document = {
+        html: html,
+        data: {
+            // users: users,
+            fileName: myArgs[0],
+            functionName: myArgs[1],
+            functionEffect: myArgs[2],
+            input: [{
+                name: "gsgsgsg",
+                type: "gsgsgsg",
+                chName: "中文名稱",
+            }],
+            output: [{
+                name: "gsgsgsg",
+                type: "gsgsgsg",
+                chName: "gsgsgsg",
+                comment: "fsdfsdfsdfsdf"
+            }],
+        },
+        path: `./output--${ myArgs[0] }.pdf`,
+        type: "",
+    };
+
+    pdf.create(document, options)
+        .then((res) => {
+            console.log(res);
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+}
+
+// var users = [{
+//         name: "Shyam",
+//         age: "26",
+//     },
+//     {
+//         name: "Navjot",
+//         age: "26",
+//     },
+//     {
+//         name: "Vitthal",
+//         age: "26",
+//     },
+// ];
