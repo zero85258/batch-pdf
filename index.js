@@ -36,7 +36,7 @@ var options = {
 };
 
 listJson.forEach(myArgs => {
-    console.log(myArgs)
+    // console.log(myArgs)
     if(typeof myArgs[3] == 'string')
         inputParameters = myArgs[3].split(",");
     else
@@ -57,7 +57,7 @@ listJson.forEach(myArgs => {
             chName: "中文名稱"
         })
     }
-    console.log(inputRst)
+    // console.log(inputRst)
     
     outputRst = []
     for (outputParameter in outputParameters) {
