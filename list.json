@@ -800,14 +800,14 @@
   [
     "./dao/work_order_dao.py",
     "_get_success_sql_with_cnt",
-    "使用cnt獲取成功的sql",
+    "獲取成功的sql 有cnt",
     "(src_check: CheckCntAndSumDto, tgt_check: CheckCntAndSumDto)",
     "Tuple"
   ],
   [
     "./dao/work_order_dao.py",
     "_get_success_sql_without_cnt",
-    "沒有cnt獲得成功的sql",
+    "獲取成功的sql 沒有cnt",
     "(src_check: CheckCntAndSumDto)",
     "Tuple"
   ],
