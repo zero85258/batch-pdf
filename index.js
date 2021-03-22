@@ -43,12 +43,6 @@ listJson.forEach(myArgs => {
     else
         console.log(myArgs)
 
-    if(typeof myArgs[4] == 'string')
-        outputParameters = myArgs[4].split(",");
-    else
-        console.log(myArgs)
-    
-
     inputRst = []
     inputParameters.forEach(inputParameter => {
         pair = inputParameter.split(":");
@@ -66,8 +60,8 @@ listJson.forEach(myArgs => {
     outputParameters.forEach(outputParameter => {
         pair = outputParameter.split(":");
         outputRst.push({
-            name: pair[0] || "",
-            type: pair[1] || "",
+            name: "output",
+            type: myArgs[4],
             chName: "中文名稱",
             comment: "註釋"
         })
