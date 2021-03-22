@@ -2,6 +2,9 @@
 var pdf = require("pdf-creator-node");
 var fs = require("fs");
 var listJson = require('./list.json');
+console.log(listJson)
+
+// listJson = JSON.parse(jjson)
 
 // var myArgs = process.argv.slice(2);
 // console.log('myArgs: ', myArgs);
