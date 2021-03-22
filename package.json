@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "pdf-creator-node": "^2.2.2",
+    "xlsx": "^0.16.9"
+  }
+}
