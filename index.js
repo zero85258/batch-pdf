@@ -43,12 +43,20 @@ listJson.forEach(myArgs => {
     else
         console.log(myArgs)
 
+    if(typeof myArgs[4] == 'string')
+        outputParameters = myArgs[4].split(",");
+    else
+        console.log(myArgs)
+    
+
     inputRst = []
     inputParameters.forEach(inputParameter => {
         pair = inputParameter.split(":");
+        name = typeof pair[0] == 'string' ? pair[0].replace("(", "") : pair[0]
+        type = typeof pair[1] == 'string' ? pair[1].replace(")", "") : pair[1]
         inputRst.push({
-            name: pair[0] || "",
-            type: pair[1] || "" ,
+            name: name || "",
+            type: type  || "" ,
             chName: "中文名稱"
         })
     })
@@ -61,7 +69,7 @@ listJson.forEach(myArgs => {
         pair = outputParameter.split(":");
         outputRst.push({
             name: "output",
-            type: myArgs[4],
+            type: pair[4],
             chName: "中文名稱",
             comment: "註釋"
         })
@@ -76,6 +84,7 @@ listJson.forEach(myArgs => {
             functionEffect: myArgs[2],
             input: inputRst,
             output: outputRst,
+            functionStruct: myArgs[2],
         },
         path: `./output/manual-${ myArgs[1] }.pdf`,
         type: "",
