@@ -82,7 +82,7 @@ listJson.forEach(myArgs => {
             functionEffect: myArgs[2],
             input: inputRst,
             output: outputRst,
-        },g
+        },
         path: `./output/manual-${ myArgs[1] }.pdf`,
         type: "",
     };
