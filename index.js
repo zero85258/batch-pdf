@@ -36,8 +36,16 @@ var options = {
 };
 
 for (myArgs in listJson) {
-    inputParameters = myArgs[3].split(",");
-    outputParameters = myArgs[4].split(",");
+    if typeof myArgs[3] === 'string';
+        inputParameters = myArgs[3].split(",");
+    else
+        console.log(myArgs[3])
+
+    if typeof myArgs[4] === 'string';
+        outputParameters = myArgs[4].split(",");
+    else
+        console.log(myArgs[3])
+    
 
     inputRst = []
     for (inputParameter in inputParameters) {
