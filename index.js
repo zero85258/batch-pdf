@@ -35,32 +35,34 @@ var options = {
     }
 };
 
-for (myArgs in listJson) {
-    if typeof myArgs[3] === 'string';
+listJson.forEach(myArgs => {
+    console.log(myArgs)
+    if(typeof myArgs[3] == 'string')
         inputParameters = myArgs[3].split(",");
     else
-        console.log(myArgs[3])
+        console.log(myArgs)
 
-    if typeof myArgs[4] === 'string';
+    if(typeof myArgs[4] == 'string')
         outputParameters = myArgs[4].split(",");
     else
-        console.log(myArgs[3])
+        console.log(myArgs)
     
 
     inputRst = []
     for (inputParameter in inputParameters) {
         pair = inputParameter.split(":");
-        inputRst.append({
-            name: pair[0],
-            type: pair[1],
+        inputRst.push({
+            name: pair[0] || "",
+            type: pair[1] || "" ,
             chName: "中文名稱"
         })
     }
+    console.log(inputRst)
     
     outputRst = []
     for (outputParameter in outputParameters) {
         pair = outputParameter.split(":");
-        outputRst.append({
+        outputRst.push({
             name: pair[0],
             type: pair[1],
             chName: "中文名稱",
@@ -74,7 +76,7 @@ for (myArgs in listJson) {
             fileName: myArgs[0],
             functionName: myArgs[1],
             functionEffect: myArgs[2],
-            input: intputRst,
+            input: inputRst,
             output: outputRst,
         },
         path: `./output-${ myArgs[0] }.pdf`,
@@ -88,5 +90,5 @@ for (myArgs in listJson) {
         .catch((error) => {
             console.error(error);
         });
-}
+})
 
