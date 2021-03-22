@@ -58,6 +58,7 @@ listJson.forEach(myArgs => {
             chName: "中文名稱"
         })
     }
+    console.log(inputRst)
 
     // console.log(inputRst)
     
@@ -71,6 +72,7 @@ listJson.forEach(myArgs => {
             comment: "註釋"
         })
     }
+    console.log(outputRst)
 
     var document = {
         html: html,
@@ -80,7 +82,7 @@ listJson.forEach(myArgs => {
             functionEffect: myArgs[2],
             input: inputRst,
             output: outputRst,
-        },
+        },g
         path: `./output/manual-${ myArgs[1] }.pdf`,
         type: "",
     };
