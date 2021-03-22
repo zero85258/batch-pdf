@@ -69,7 +69,7 @@ listJson.forEach(myArgs => {
         pair = outputParameter.split(":");
         outputRst.push({
             name: "-",
-            type: pair[4],
+            type: pair[4] || "無" ,
             chName: "-",
             comment: "-"
         })

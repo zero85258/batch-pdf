@@ -807,7 +807,7 @@
   [
     "./dao/work_order_dao.py",
     "_get_success_sql_without_cnt",
-    "獲取成功的sql 沒有cnt",
+    "獲取成功的sql 沒有cnt沒有",
     "(src_check: CheckCntAndSumDto)",
     "Tuple"
   ],
